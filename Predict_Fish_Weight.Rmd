@@ -147,6 +147,10 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottomleft",main="Adjusted R^2"
 The best models appear to be the model with 2 variables including L3 and W which means it i also the best 2 regressor model.
 
 ### Best Models
+```{r}
+which.max(summary.out$adjr2)
+```
+This shows that the best model is the one with 2 variables based off of the leaps that target the adjusted r-squared value. The 2 variables in the model is L3 and W.
 
 ### Best Two regressor model
 
