@@ -153,6 +153,8 @@ which.max(summary.out$adjr2)
 This shows that the best model is the one with 2 variables based off of the leaps that target the adjusted r-squared value. The 2 variables in the model is L3 and W.
 
 ### Best Two regressor model
+Leaps has shown the model with the highest adjusted r-squared value has two variables which are L3 and W. So the best 2 regressor model is the one that includes L3 and W.
+
 
 ## Final Summary Statements
 
