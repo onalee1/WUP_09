@@ -82,18 +82,19 @@ library(car)
 subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
 ```
 
-  This shows the Height and Weight variables to be the best models. This also shows to be the best two variable model and can be proven using coding.
+  This shows the Height and Width variables to be the best models. This also shows to be the best two variable model and can be proven using coding.
 
 ### Best Models
-  Best model overall
 ```{r}
 which.max(summary.out$adjr2)
 ```
 This shows that the model 2 is the best to express the data when looking at the adjusted R-squared value.
 
 ### Best Two regressor model
- Best two variable model
-
+```{r}
+summary.out$which[3,]
+```
+The best model of the perch fish is model 2, this data summary the best model has the highest adjusted R-squared value and that model has two variables meaning model 2 is the best two regression model.
 
 
 ## Pike
