@@ -98,6 +98,23 @@ The best model of the perch fish is model 2, this data summary the best model ha
 
 
 ## Pike
+```{r}
+library(leaps)
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Pike,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+```
+
+The best model appears to be model 5 including all L1, L2, L3, H, and W. variables. The best 2 regressor model appears to be model L1 and L3.
 
 ### Best Models
 
@@ -110,3 +127,5 @@ The best model of the perch fish is model 2, this data summary the best model ha
 ### Best Two regressor model
 
 ## Final Summary Statements
+
+
