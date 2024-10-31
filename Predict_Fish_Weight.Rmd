@@ -86,7 +86,10 @@ subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
 
 ### Best Models
   Best model overall
-
+```{r}
+which.max(summary.out$adjr2)
+```
+This shows that the model 2 is the best to express the data when looking at the adjusted R-squared value.
 
 ### Best Two regressor model
  Best two variable model
